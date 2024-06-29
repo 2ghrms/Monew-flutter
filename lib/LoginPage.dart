@@ -19,6 +19,7 @@ class _LoginState extends State<LoginPage> {
         body: ListView(children: [
           title(),
           LoginInput(),
+          logo(),
         ],
         )
       ),
@@ -312,6 +313,27 @@ class _InputState extends State<LoginInput>{
                 fontWeight: FontWeight.w400,
                 height: 0.12,
               ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class logo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context){
+    return Column(
+      children: [
+        SizedBox(height: 150),
+        Container(
+          width: 70,
+          height: 67,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/monew_logo_bottom.png'),
+              fit: BoxFit.fill,
             ),
           ),
         ),
