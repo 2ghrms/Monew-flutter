@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:monew/ProfilePage.dart';
 
 class SignupPage extends StatefulWidget {
   const SignupPage({Key? key}) : super(key: key);
@@ -225,7 +226,7 @@ class _InputState extends State<SignupInput>{
                   Expanded(
                     child: SizedBox(
                       child: TextField(
-                          controller: _idController,
+                          controller: _emailController,
                           decoration: InputDecoration(
                             hintText: '이메일을 입력하세요.',
                             hintStyle: TextStyle(
@@ -278,7 +279,7 @@ class _InputState extends State<SignupInput>{
                   Expanded(
                     child: SizedBox(
                       child: TextField(
-                          controller: _idController,
+                          controller: _passwordController,
                           decoration: InputDecoration(
                             hintText: '비밀번호를 입력하세요.',
                             hintStyle: TextStyle(
@@ -431,13 +432,29 @@ class _InputState extends State<SignupInput>{
               ),
             ),
             SizedBox(height: 15),
-            Container(
+        Center(
+          child: ElevatedButton(
+            onPressed: () {
+              print('Google button clicked');
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfilePage()));
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Color(0xFFEEEEEE),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+              padding: EdgeInsets.zero,
+              elevation: 0, // Remove shadow
+            ),
+            child: Container(
               width: double.infinity,
               height: 40,
               padding: const EdgeInsets.symmetric(vertical: 10),
               decoration: ShapeDecoration(
                 color: Color(0xFFEEEEEE),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
               ),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
@@ -475,6 +492,8 @@ class _InputState extends State<SignupInput>{
                 ],
               ),
             ),
+          ),
+        ),
           ],
         ),
       ),
