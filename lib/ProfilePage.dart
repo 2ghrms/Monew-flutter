@@ -271,7 +271,7 @@ class _InputState extends State<ProfileInput>{
                     Expanded(
                         child: SizedBox(
                           child: TextField(
-                            controller: _nameController,
+                            controller: _birthController,
                             decoration: InputDecoration(
                               hintText: '[MM/dd/yyyy]',
                               hintStyle: TextStyle(
@@ -322,7 +322,7 @@ class _InputState extends State<ProfileInput>{
                     Expanded(
                         child: SizedBox(
                           child: TextField(
-                            controller: _nameController,
+                            controller: _jobController,
                             decoration: InputDecoration(
                               hintText: 'job',
                               hintStyle: TextStyle(
@@ -373,7 +373,7 @@ class _InputState extends State<ProfileInput>{
                     Expanded(
                         child: SizedBox(
                           child: TextField(
-                            controller: _nameController,
+                            controller: _introController,
                             decoration: InputDecoration(
                               hintText: 'About Me',
                               hintStyle: TextStyle(
