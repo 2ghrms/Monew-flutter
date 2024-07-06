@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:monew/SignupPage.dart';
-import 'StartPage.dart';
-import 'SignupPage.dart';
+import 'package:monew/LoginPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const StartPage(),
+      home: const LoginPage(),
     );
   }
 }

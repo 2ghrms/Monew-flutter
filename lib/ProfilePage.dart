@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:monew/InterestSetPage.dart';
+import 'package:monew/utils/utils.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -17,16 +18,16 @@ class _ProfileState extends State<ProfilePage>{
       ),
       home:Scaffold(
           body: ListView(children: [
-            title(),
+            Title(),
             ProfileInput(),
-            logo(),
+            logo()
           ],)
       ),
     );
   }
 }
 
-class title extends StatelessWidget{
+class Title extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -439,27 +440,6 @@ class _InputState extends State<ProfileInput>{
           ],
         )
       ),
-    );
-  }
-}
-
-class logo extends StatelessWidget {
-  @override
-  Widget build(BuildContext context){
-    return Column(
-      children: [
-        SizedBox(height: 50),
-        Container(
-          width: 70,
-          height: 67,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/images/monew_logo_bottom.png'),
-              fit: BoxFit.fill,
-            ),
-          ),
-        ),
-      ],
     );
   }
 }

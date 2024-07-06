@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:monew/HomePage.dart';
+import 'package:monew/utils/utils.dart';
 
 class Interestsetpage extends StatefulWidget {
   const Interestsetpage({super.key});
@@ -188,27 +189,6 @@ class _ListState extends State<InterestList>{
           ],
         )
       )
-    );
-  }
-}
-
-class logo extends StatelessWidget {
-  @override
-  Widget build(BuildContext context){
-    return Column(
-      children: [
-        SizedBox(height: 50),
-        Container(
-          width: 70,
-          height: 67,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/images/monew_logo_bottom.png'),
-              fit: BoxFit.fill,
-            ),
-          ),
-        ),
-      ],
     );
   }
 }

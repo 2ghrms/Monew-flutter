@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:monew/MyPage.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -150,13 +151,7 @@ class MyPageScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.green,
-      child: Center(
-        child: Text(
-          'MyPage Screen',
-          style: TextStyle(fontSize: 24, color: Colors.white),
-        ),
-      ),
+      child: MyPage(),
     );
   }
 }
