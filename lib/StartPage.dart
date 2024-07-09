@@ -36,7 +36,7 @@ class _StartState extends State<StartPage> {
             top: 135,
             left: 81,
             right: 81,
-            bottom: 427.71,
+            bottom: 295,
           ),
           clipBehavior: Clip.antiAlias,
           decoration: const BoxDecoration(
